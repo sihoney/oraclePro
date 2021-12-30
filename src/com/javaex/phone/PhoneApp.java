@@ -43,13 +43,13 @@ public class PhoneApp {
 				System.out.println("<2. 등록>");
 				
 				System.out.print("이름 > ");
-				arr[1] = br.readLine();
+				String name = br.readLine();
 				System.out.print("휴대전화 > ");
-				arr[2] = br.readLine();
+				String hp = br.readLine();
 				System.out.print("회사전화 > ");
-				arr[3] = br.readLine();
+				String compony = br.readLine();
 				
-				PersonVo pvo02 = new PersonVo(-1, (String) arr[1], (String) arr[2], (String) arr[3]);
+				PersonVo pvo02 = new PersonVo(-1, name, hp, compony);
 				phoneDao.insertPerson(pvo02);
 				break;
 				
@@ -57,15 +57,15 @@ public class PhoneApp {
 				System.out.println("<3. 수정>");
 				
 				System.out.print("번호 > ");
-				arr[0] = Integer.parseInt(br.readLine());
+				int personId = Integer.parseInt(br.readLine());
 				System.out.print("이름 > ");
-				arr[1] = br.readLine();
+				name = br.readLine();
 				System.out.print("휴대전화 > ");
-				arr[2] = br.readLine();
+				hp = br.readLine();
 				System.out.print("회사전화 > ");
-				arr[3] = br.readLine();
+				compony = br.readLine();
 				
-				PersonVo pvo03 = new PersonVo((int) arr[0], (String) arr[1], (String) arr[2], (String) arr[3]);
+				PersonVo pvo03 = new PersonVo(personId, name, hp, compony);
 				phoneDao.updatePerson(pvo03);
 				break;
 				
@@ -73,7 +73,7 @@ public class PhoneApp {
 				System.out.println("<3. 수정>");
 				
 				System.out.print("번호 > ");
-				int personId = Integer.parseInt(br.readLine());
+				personId = Integer.parseInt(br.readLine());
 				
 				phoneDao.deletePerson(personId);
 				break;

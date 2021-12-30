@@ -6,14 +6,7 @@ public class PersonVo {
 	private String name;
 	private String hp;
 	private String company;
-	
-	public PersonVo(String name, String hp, String company) {
-		super();
-		this.name = name;
-		this.hp = hp;
-		this.company = company;
-	}
-	// select
+
 	public PersonVo(int personId, String name, String hp, String company) {
 		this.personId = personId;
 		this.name = name;
@@ -57,6 +50,6 @@ public class PersonVo {
 	}
 	
 	public void print() {
-		System.out.println(personId + ".   " + name + "\t" + hp + "\t" + company);
+		System.out.println(personId + ".\t" + name + "\t" + hp + "\t" + company);
 	}
 }
