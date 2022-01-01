@@ -11,7 +11,6 @@ public class PhoneApp {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		PhoneDao phoneDao = new PhoneDao();
 		ArrayList<PersonVo> list;
-		Object[] arr = new Object[4];
 				
 		System.out.println("*********************************************");
 		System.out.println("*               전화 관리 프로그램               *");
@@ -70,7 +69,7 @@ public class PhoneApp {
 				break;
 				
 			case 4: // 삭제
-				System.out.println("<3. 수정>");
+				System.out.println("4. 삭제>");
 				
 				System.out.print("번호 > ");
 				personId = Integer.parseInt(br.readLine());
@@ -79,7 +78,7 @@ public class PhoneApp {
 				break;
 				
 			case 5: // 검색
-				System.out.println("<3. 수정>");
+				System.out.println("<5. 검색>");
 				
 				System.out.print("검색어 > ");
 				String search = br.readLine();
